@@ -11,7 +11,7 @@ type HeaderProps = {
     }[];
     theme: 'light' | 'dark';
     toggleTheme: () => void;
-}
+};
 
 
 export function Header({ cart = [], theme, toggleTheme }: HeaderProps) {
