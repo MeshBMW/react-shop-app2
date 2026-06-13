@@ -2,7 +2,7 @@ import '../styles/pages/orders/orders.css'
 import { Header } from "../components/Header.tsx";
 import {OrdersGrid} from "../components/OrdersGrid.jsx";
 import { useState, useEffect } from "react";
-import axios from "axios";
+import api from '../api';
 
 
 export function OrdersPage({ cartItems = [], loadCart, theme = 'light', toggleTheme = () => {} }) {
@@ -10,7 +10,7 @@ export function OrdersPage({ cartItems = [], loadCart, theme = 'light', toggleTh
 
   useEffect(() => {
     const fetchOrdersPageData = async () => {
-      const response = await axios.get('/api/orders?expand=products')
+      const response = await api.get('/api/orders?expand=products')
       setOrders(response.data);
     }
     fetchOrdersPageData();

@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import axios from "axios";
+import api from '../api';
 import { useNavigate } from 'react-router';
 
 
@@ -9,14 +9,14 @@ export function PaymentSummary({ cartItems, loadCart }) {
 
   useEffect(() => {
     const loadPaymentSummary = async () => {
-      const response = await axios.get('/api/payment-summary')
+      const response = await api.get('/api/payment-summary')
       setPaymentSummary(response.data);
     }
     loadPaymentSummary();
   }, [cartItems])
 
   const placeOrder = async () =>  {
-    await axios.post('/api/orders')
+    await api.post('/api/orders')
     await loadCart();
     navigate('/orders');
   }

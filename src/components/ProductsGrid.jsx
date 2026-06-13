@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import api from '../api';
 import { Product } from './Product'
 import {useSearchParams} from "react-router";
 
@@ -17,7 +17,7 @@ export function ProductsGrid({ loadCart }) {
       const urlPath = normalizedSearch
           ? `/api/products?search=${encodeURIComponent(normalizedSearch)}`
           : '/api/products';
-      const response = await axios.get(urlPath);
+      const response = await api.get(urlPath);
 
       if (!ignoreResponse) {
         setProducts(response.data);

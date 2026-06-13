@@ -1,4 +1,4 @@
-import axios from 'axios';
+import api from '../api';
 import { useEffect, useRef, useState } from 'react';
 import { formatMoney } from '../utils/money';
 
@@ -19,7 +19,7 @@ export function Product({ product, loadCart }) {
    try {
      setIsAdding(true);
      setAddedText(true);
-     await axios.post('/api/cart-items', {
+     await api.post('/api/cart-items', {
        productId: product.id,
        quantity
      })

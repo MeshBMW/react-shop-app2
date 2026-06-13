@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import api from '../api';
 
 
 export function CartItemDetails({ cartItem, deleteCartItem, loadCart }) {
@@ -16,7 +16,7 @@ export function CartItemDetails({ cartItem, deleteCartItem, loadCart }) {
         return;
       }
 
-      await axios.put(`/api/cart-items/${cartItem.productId}`, {
+      await api.put(`/api/cart-items/${cartItem.productId}`, {
         quantity: nextQuantity
       })
       await loadCart();

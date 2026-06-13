@@ -1,4 +1,4 @@
-import axios from 'axios';
+import api from '../api';
 import { useEffect, useState } from 'react';
 import dayjs from 'dayjs'
 import {DeliveryOptions} from "./DeliveryOptions.jsx";
@@ -10,7 +10,7 @@ export function OrderSummary({ cartItems, loadCart }) {
 
   useEffect(() => {
     const fetchOrderSMData = async () => {
-      const response = await axios.get('api/delivery-options?expand=estimatedDeliveryTime')
+      const response = await api.get(`${import.meta.env.VITE_API_URL}/api/delivery-options?expand=estimatedDeliveryTime`)
       setDeliveryOptions(response.data);
     }
     fetchOrderSMData();
@@ -29,7 +29,7 @@ export function OrderSummary({ cartItems, loadCart }) {
                 : 'Delivery option unavailable';
 
             async function deleteCartItem() {
-              await axios.delete(`/api/cart-items/${cartItem.productId}`)
+              await api.delete(`${import.meta.env.VITE_API_URL}/api/cart-items/${cartItem.productId}`)
               await loadCart();
             }
 

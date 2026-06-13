@@ -1,6 +1,6 @@
 import './index.css'
 import {useEffect, useState} from "react";
-import axios from "axios";
+import api from './api';
 import { Routes, Route } from 'react-router'
 import { HomePage } from "./pages/HomePage";
 import { CheckoutPage } from "./pages/CheckoutPage";
@@ -27,7 +27,7 @@ function App() {
   const [theme, setTheme] = useState<Theme>(getInitialTheme);
 
   const loadCart = async () => {
-    const response = await axios.get('api/cart-items?expand=product')
+    const response = await api.get('api/cart-items?expand=product')
     setCartItems(response.data);
   }
 
