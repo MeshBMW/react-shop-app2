@@ -20,7 +20,6 @@
 | TypeScript | Типизация |
 | Vite | Сборщик |
 | Axios | HTTP-запросы к API |
-| TailwindCSS | Стилизация |
 | Vitest | Тестирование |
 
 ---
