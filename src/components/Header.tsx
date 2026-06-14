@@ -39,10 +39,10 @@ export function Header({ cart = [], theme, toggleTheme }: HeaderProps) {
           <NavLink to="/" className="header-link">
             <img className="logo"
                alt="Shop logo"
-               src="images/logo-white.png"/>
+               src="images/Slogo.jpg"/>
             <img className="mobile-logo"
                alt="Shop logo"
-               src="images/mobile-logo-white.png"/>
+               src="images/Slogo.jpg"/>
           </NavLink>
         </div>
 
