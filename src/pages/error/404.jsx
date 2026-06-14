@@ -21,6 +21,7 @@ export function NF404() {
         }}>
           404 Error. Not Found!
         </div>
+        <a href='/'>Back to Home Page</a>
       </>
   )
 }
