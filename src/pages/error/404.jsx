@@ -1,4 +1,4 @@
-import {Header} from "../../components/Header.tsx";
+import { Header } from "../../components/Header.tsx";
 
 export function NF404() {
   return (
@@ -21,7 +21,16 @@ export function NF404() {
         }}>
           404 Error. Not Found!
         </div>
-        <a href='/'>Back to Home Page</a>
+        <a href='/' style={{
+          justifyContent: "center",
+          alignItems: "center",
+          display: "flex",
+          fontSize: "20px",
+          textAlign: "center",
+          marginTop: "10px",
+          padding: "10px",
+          textDecorationThickness: "2px",
+        }}>Back to Home Page</a>
       </>
   )
 }
