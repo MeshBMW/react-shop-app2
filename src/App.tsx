@@ -8,6 +8,7 @@ import { OrdersPage } from "./pages/OrdersPage";
 import { TrackingPage } from "./pages/TrackingPage.jsx";
 import { NF404 } from "./pages/error/404.jsx";
 
+
 type Theme = 'light' | 'dark';
 
 function getInitialTheme(): Theme {
