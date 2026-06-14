@@ -1,8 +1,15 @@
 import '../styles/pages/tracking/tracking.css'
 import { Header } from "../components/Header.tsx";
 import dayjs from 'dayjs'
+import { useLocation } from 'react-router';
 
 export function TrackingPage({ cartItems = [], theme = 'light', toggleTheme = () => {} }) {
+  const location = useLocation();
+  const { orderProduct, order } = location.state || {};
+
+  if (!orderProduct) {
+    return <div>No tracking data found.</div>;
+  }
   return (
       <>
         <link rel="apple-touch-icon" sizes="180x180" href="/faviconT/apple-touch-icon.png"/>

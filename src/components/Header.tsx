@@ -65,10 +65,6 @@ export function Header({ cart = [], theme, toggleTheme }: HeaderProps) {
         <div className="right-section">
           <ThemeToggle theme={theme} onToggleTheme={toggleTheme} />
 
-          <NavLink to="/login" className="header-link">
-            <span>Login</span>
-          </NavLink>
-
           <NavLink to="/orders" className="orders-link header-link">
 
             <span className="orders-text">Orders</span>
