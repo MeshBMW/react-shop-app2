@@ -32,8 +32,7 @@ export function NF404() {
             padding: "10px",
             textDecorationThickness: "2px",
           }
-        }
-        >
+        }>
           Back to Home Page
         </a>
       </>
