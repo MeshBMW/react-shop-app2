@@ -68,6 +68,12 @@
     margin-top: 1px;
   }
 }
+.mobile-logo {
+  background-color: transparent;
+}
+.logo {
+  background-color: transparent;
+}
 
 .header .middle-section {
   flex: 1;
