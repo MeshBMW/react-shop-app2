@@ -2,7 +2,7 @@
 
 Интернет-магазин, построенный на React + TypeScript с интеграцией REST API.
 
-🔗 **[Live Demo](https://your-deploy-link.vercel.app)** &nbsp;|&nbsp; 💻 **[GitHub](https://github.com/MeshBMW/react-shop-app)**
+🔗 **[Live Demo](https://supersimpleshop.vercel.app)** &nbsp;|&nbsp; 💻 **[GitHub](https://github.com/MeshBMW/react-shop-app2)**
 
 ---
 
