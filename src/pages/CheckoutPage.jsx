@@ -20,8 +20,8 @@ export function CheckoutPage({ cartItems = [], loadCart, theme = 'light', toggle
           <div className="header-content">
             <div className="checkout-header-left-section">
               <Link to="/">
-                <img className="logo" alt="Shop logo" src="images/logo.png"/>
-                <img className="mobile-logo" alt="Shop logo" src="images/mobile-logo.png"/>
+                <img className="logo" alt="Shop logo" src="images/Slogo.jpg"/>
+                <img className="mobile-logo" alt="Shop logo" src="images/Slogo.jpg"/>
               </Link>
             </div>
 
