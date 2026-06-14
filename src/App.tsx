@@ -8,7 +8,7 @@ import { OrdersPage } from "./pages/OrdersPage";
 import { TrackingPage } from "./pages/TrackingPage.jsx";
 import { NF404 } from "./pages/error/404.jsx";
 import { Analytics } from "@vercel/analytics/react"
-
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 type Theme = 'light' | 'dark';
 
@@ -49,6 +49,7 @@ function App() {
   return (
     <>
       <Analytics />
+      <SpeedInsights />
       <Routes>
         <Route index element={<HomePage cartItems={cartItems} loadCart={loadCart} theme={theme} toggleTheme={toggleTheme} />} />
         <Route path="checkout" element={<CheckoutPage cartItems={cartItems} loadCart={loadCart} theme={theme} toggleTheme={toggleTheme} />} />
