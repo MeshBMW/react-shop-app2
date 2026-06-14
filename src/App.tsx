@@ -7,6 +7,7 @@ import { CheckoutPage } from "./pages/CheckoutPage";
 import { OrdersPage } from "./pages/OrdersPage";
 import { TrackingPage } from "./pages/TrackingPage.jsx";
 import { NF404 } from "./pages/error/404.jsx";
+import { Analytics } from "@vercel/analytics/next"
 
 
 type Theme = 'light' | 'dark';
@@ -47,6 +48,7 @@ function App() {
 
   return (
     <>
+      <Analytics />
       <Routes>
         <Route index element={<HomePage cartItems={cartItems} loadCart={loadCart} theme={theme} toggleTheme={toggleTheme} />} />
         <Route path="checkout" element={<CheckoutPage cartItems={cartItems} loadCart={loadCart} theme={theme} toggleTheme={toggleTheme} />} />
