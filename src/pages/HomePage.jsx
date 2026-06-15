@@ -4,23 +4,6 @@ import { ProductsGrid } from "../components/ProductsGrid.jsx";
 
 
 export function HomePage({ cartItems, loadCart, theme = 'light', toggleTheme = () => {} }) {
-  if (cartItems.length === 0) {
-    return (
-        <div style={{
-          fontSize: "24px",
-          color: "white",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          padding: "10px",
-          height: "100vh",
-          textDecorationColor: "white",
-          textDecorationThickness: "2px",
-        }}>
-          <img src="/loading-spinner.svg" alt=""/>
-        </div>
-    )
-  }
 
     return (
         <>

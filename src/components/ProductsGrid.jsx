@@ -32,12 +32,15 @@ export function ProductsGrid({ loadCart }) {
   }, [search]);
 
   return (
-      <div className="products-grid">
-        {products.map((product) => {
-          return (
-             <Product key={product.id} product={product} loadCart={loadCart} />
-          )
-        })}
-      </div>
+      <>
+        {products.length === 0 && <div className="loading-spinner"><img src="/loading-spinner.svg" alt=""/></div>}
+        <div className="products-grid">
+          {products.map((product) => {
+            return (
+               <Product key={product.id} product={product} loadCart={loadCart} />
+            )
+          })}
+        </div>
+      </>
   )
 }
