@@ -1,14 +1,8 @@
-# 🛍️ React Shop App
+<img width="1920" height="1080" alt="review1" src="https://github.com/user-attachments/assets/882a73b3-634c-4074-8493-44d850ba23ba" /># 🛍️ React Shop App
 
 Интернет-магазин, построенный на React + TypeScript с интеграцией REST API.
 
 🔗 **[Live Demo](https://supersimpleshop.vercel.app)** &nbsp;|&nbsp; 💻 **[GitHub](https://github.com/MeshBMW/react-shop-app2)**
-
----
-
-## 📸 Скриншоты
-
-> _(добавь сюда 1–2 скриншота проекта)_
 
 ---
 
