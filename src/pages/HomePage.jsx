@@ -4,6 +4,21 @@ import { ProductsGrid } from "../components/ProductsGrid.jsx";
 
 
 export function HomePage({ cartItems, loadCart, theme = 'light', toggleTheme = () => {} }) {
+  if (cartItems.length === 0) {
+    return (
+        <div style={{
+          fontSize: "24px",
+          color: "white",
+          marginTop: "30px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: "10px",
+          textDecorationColor: "white",
+          textDecorationThickness: "2px",
+        }}>Loading...</div>
+    )
+  }
 
     return (
         <>

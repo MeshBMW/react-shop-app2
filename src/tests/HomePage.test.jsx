@@ -1,5 +1,5 @@
-import { it, vi, describe, expect, beforeEach } from "vitest";
-import { render, screen } from "@testing-library/react";
+import { it, vi, describe, expect, beforeEach} from "vitest";
+import { render, screen, } from "@testing-library/react";
 import { HomePage } from "../pages/HomePage";
 import { MemoryRouter } from "react-router";
 import axios from 'axios'

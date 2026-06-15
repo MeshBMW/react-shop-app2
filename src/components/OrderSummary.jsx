@@ -9,7 +9,6 @@ export function OrderSummary({ cartItems, loadCart, theme }) {
   const [deliveryOptions, setDeliveryOptions] = useState([]);
   let classNameOfA = '';
   const isDarkTheme = theme === 'dark';
-  const isLightTheme = theme === 'light';
   useEffect(() => {
     const fetchOrderSMData = async () => {
       const response = await api.get(`${import.meta.env.VITE_API_URL}/api/delivery-options?expand=estimatedDeliveryTime`)

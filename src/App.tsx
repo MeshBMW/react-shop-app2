@@ -48,7 +48,6 @@ function App() {
 
   return (
     <>
-      <Analytics />
       <SpeedInsights />
       <Routes>
         <Route index element={<HomePage cartItems={cartItems} loadCart={loadCart} theme={theme} toggleTheme={toggleTheme} />} />
@@ -57,6 +56,7 @@ function App() {
         <Route path="tracking" element={<TrackingPage cartItems={cartItems} theme={theme} toggleTheme={toggleTheme} />} />
         <Route path="*" element={<NF404 />} />
       </Routes>
+      <Analytics />
     </>
   )
 }
