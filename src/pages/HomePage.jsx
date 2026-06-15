@@ -9,14 +9,16 @@ export function HomePage({ cartItems, loadCart, theme = 'light', toggleTheme = (
         <div style={{
           fontSize: "24px",
           color: "white",
-          marginTop: "30px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           padding: "10px",
+          height: "100vh",
           textDecorationColor: "white",
           textDecorationThickness: "2px",
-        }}>Loading...</div>
+        }}>
+          <img src="/loading-spinner.svg" alt=""/>
+        </div>
     )
   }
 
