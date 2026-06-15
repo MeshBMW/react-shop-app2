@@ -6,7 +6,6 @@
 
 =======
 # 🛍️ React Shop App
->>>>>>> 624cb3fc0d5ab95049413c09d0730e9783cd67cf
 Интернет-магазин, построенный на React + TypeScript с интеграцией REST API.
 
 🔗 **[Live Demo](https://supersimpleshop.vercel.app)** &nbsp;|&nbsp; 💻 **[GitHub](https://github.com/MeshBMW/react-shop-app2)**
