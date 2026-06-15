@@ -1,14 +1,14 @@
 import './index.css'
 import {useEffect, useState} from "react";
 import api from './api';
-import { Routes, Route } from 'react-router'
+import { Routes as Router, Route } from 'react-router'
 import { HomePage } from "./pages/HomePage";
 import { CheckoutPage } from "./pages/CheckoutPage";
 import { OrdersPage } from "./pages/OrdersPage";
 import { TrackingPage } from "./pages/TrackingPage.jsx";
 import { NF404 } from "./pages/error/404.jsx";
-// import { Analytics } from "@vercel/analytics/react"
-// import { SpeedInsights } from "@vercel/speed-insights/react"
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 type Theme = 'light' | 'dark';
 
@@ -48,13 +48,15 @@ function App() {
 
   return (
     <>
-      <Routes>
+      <SpeedInsights />
+      <Router>
         <Route index element={<HomePage cartItems={cartItems} loadCart={loadCart} theme={theme} toggleTheme={toggleTheme} />} />
         <Route path="checkout" element={<CheckoutPage cartItems={cartItems} loadCart={loadCart} theme={theme} toggleTheme={toggleTheme} />} />
         <Route path="orders" element={<OrdersPage cartItems={cartItems} loadCart={loadCart} theme={theme} toggleTheme={toggleTheme} />} />
         <Route path="tracking" element={<TrackingPage cartItems={cartItems} theme={theme} toggleTheme={toggleTheme} />} />
         <Route path="*" element={<NF404 />} />
-      </Routes>
+      </Router>
+      <Analytics />
     </>
   )
 }
