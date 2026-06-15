@@ -4,7 +4,6 @@
 <img width="1920" height="1080" alt="review2" src="https://github.com/user-attachments/assets/53f14c96-e9eb-42ea-8c8b-ce94b1ba21c2" />
 <img width="1920" height="1080" alt="review3" src="https://github.com/user-attachments/assets/ecb51a89-acb7-46d2-97ae-d9f97e78f549" />
 
-=======
 # 🛍️ React Shop App
 Интернет-магазин, построенный на React + TypeScript с интеграцией REST API.
 
