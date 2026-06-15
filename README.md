@@ -61,9 +61,12 @@ npm run dev
 src/
 ├── components/     # UI-компоненты
 ├── pages/          # Страницы приложения
-├── hooks/          # Кастомные хуки
-├── types/          # TypeScript типы
+├── utils/          # Утилити
+├── styles/         # Cтили
+├── tests/          # Тесты  
 └── App.tsx
+
+ 
 data/               # Локальные данные / моки
 ```
 
