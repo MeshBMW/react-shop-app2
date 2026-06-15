@@ -16,42 +16,48 @@ export function OrderSummary({ cartItems, loadCart }) {
     fetchOrderSMData();
   }, [])
 
-  return (
-      <>
-        <div className="order-summary">
-          {deliveryOptions.length > 0 && cartItems.map((cartItem) => {
+  if (cartItems.length === 0)
+    return (
+      <div>No items in cart.<a href="/" style={{color: 'white', borderRadius: '5px', textDecoration: 'underline'}}
+        >Order.</a>
+      </div>
+  )
+    return (
+        <>
+          <div className="order-summary">
+            {deliveryOptions.length > 0 && cartItems.map((cartItem) => {
 
-            const selectedDeliveryOption = deliveryOptions.find((deliveryOption) => {
-              return deliveryOption.id === cartItem.deliveryOptionId
-            })
-            const deliveryDate = selectedDeliveryOption
-                ? dayjs(selectedDeliveryOption.estimatedDeliveryTimeMs).format('dddd, MMMM D')
-                : 'Delivery option unavailable';
+              const selectedDeliveryOption = deliveryOptions.find((deliveryOption) => {
+                return deliveryOption.id === cartItem.deliveryOptionId
+              })
+              const deliveryDate = selectedDeliveryOption
+                  ? dayjs(selectedDeliveryOption.estimatedDeliveryTimeMs).format('dddd, MMMM D')
+                  : 'Delivery option unavailable';
 
-            async function deleteCartItem() {
-              await api.delete(`${import.meta.env.VITE_API_URL}/api/cart-items/${cartItem.productId}`)
-              await loadCart();
-            }
+              async function deleteCartItem() {
+                await api.delete(`${import.meta.env.VITE_API_URL}/api/cart-items/${cartItem.productId}`)
+                await loadCart();
+              }
 
-            return (
-                <div key={cartItem.id} className="cart-item-container">
-                  <div className="delivery-date">
-                    Delivery date: {deliveryDate}
+              return (
+                  <div key={cartItem.id} className="cart-item-container">
+                    <div className="delivery-date">
+                      Delivery date: {deliveryDate}
+                    </div>
+
+                    <div className="cart-item-details-grid">
+                      <img className="product-image" alt={cartItem.product.name}
+                           src={cartItem.product.image}
+                      />
+
+                      <CartItemDetails cartItem={cartItem} deleteCartItem={deleteCartItem} loadCart={loadCart}/>
+                      <DeliveryOptions deliveryOptions={deliveryOptions} cartItem={cartItem} loadCart={loadCart}/>
+                    </div>
                   </div>
-
-                  <div className="cart-item-details-grid">
-                    <img className="product-image" alt={cartItem.product.name}
-                         src={cartItem.product.image}
-                    />
-
-                    <CartItemDetails cartItem={cartItem} deleteCartItem={deleteCartItem} loadCart={loadCart} />
-                    <DeliveryOptions deliveryOptions={deliveryOptions} cartItem={cartItem} loadCart={loadCart} />
-                  </div>
-                </div>
-            )
-          })}
+              )
+            })}
 
           </div>
-      </>
-  )
+        </>
+    )
 }

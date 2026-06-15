@@ -51,7 +51,8 @@ export function Product({ product, loadCart }) {
           <img className="product-image"
                data-testid="product-image"
                alt={name}
-               src={image}/>
+               src={image}
+          />
         </div>
 
         <div className="product-name limit-text-to-2-lines"

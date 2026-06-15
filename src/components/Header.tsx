@@ -38,10 +38,10 @@ export function Header({ cart = [], theme, toggleTheme }: HeaderProps) {
         <div className="left-section">
           <NavLink to="/" className="header-link">
             <img className="logo"
-               alt="Shop logo"
+               alt="Logo"
                src="images/Slogo.jpg"/>
             <img className="mobile-logo"
-               alt="Shop logo"
+               alt="Logo"
                src="images/Slogo.jpg"/>
           </NavLink>
         </div>
