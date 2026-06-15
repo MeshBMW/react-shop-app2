@@ -5,9 +5,11 @@ import {DeliveryOptions} from "./DeliveryOptions.jsx";
 import {CartItemDetails} from "./CartItemDetails.jsx";
 
 
-export function OrderSummary({ cartItems, loadCart }) {
+export function OrderSummary({ cartItems, loadCart, theme }) {
   const [deliveryOptions, setDeliveryOptions] = useState([]);
-
+  let classNameOfA = '';
+  const isDarkTheme = theme === 'dark';
+  const isLightTheme = theme === 'light';
   useEffect(() => {
     const fetchOrderSMData = async () => {
       const response = await api.get(`${import.meta.env.VITE_API_URL}/api/delivery-options?expand=estimatedDeliveryTime`)
@@ -16,9 +18,11 @@ export function OrderSummary({ cartItems, loadCart }) {
     fetchOrderSMData();
   }, [])
 
+  isDarkTheme ? classNameOfA = 'white-color' : classNameOfA = 'black-color';
+
   if (cartItems.length === 0)
     return (
-      <div>No items in cart.<a href="/" style={{color: 'white', borderRadius: '5px', textDecoration: 'underline'}}
+      <div>No items in cart. <a className={classNameOfA} href="/" style={{textDecoration: 'underline'}}
         >Order.</a>
       </div>
   )

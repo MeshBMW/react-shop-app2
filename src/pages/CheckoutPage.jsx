@@ -41,7 +41,7 @@ export function CheckoutPage({ cartItems = [], loadCart, theme = 'light', toggle
           <div className="page-title">Review your order</div>
 
           <div className="checkout-grid">
-            <OrderSummary cartItems={cartItems} loadCart={loadCart} />
+            <OrderSummary cartItems={cartItems} loadCart={loadCart} theme={theme} />
             <PaymentSummary cartItems={cartItems} loadCart={loadCart} />
           </div>
         </div>
